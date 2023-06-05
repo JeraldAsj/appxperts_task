@@ -1,11 +1,9 @@
-import React from 'react'
+import React from "react";
 
-type Props = {}
+type Props = {};
 
-
-
-import { Fragment, useState } from 'react'
-import { Dialog, Transition } from '@headlessui/react'
+import { Fragment, useState } from "react";
+import { Dialog, Transition } from "@headlessui/react";
 import {
   Bars3Icon,
   CalendarIcon,
@@ -15,38 +13,27 @@ import {
   HomeIcon,
   UsersIcon,
   XMarkIcon,
-} from '@heroicons/react/24/outline'
-import { classNames } from '../../lib/helpers'
+} from "@heroicons/react/24/outline";
+import { classNames } from "../../lib/helpers";
 
 const navigation = [
- 
-  { name: 'Client', href: '#', icon: UsersIcon, current: true },
-  
-]
-
-
-
+  { name: "Client", href: "#", icon: UsersIcon, current: true },
+];
 
 interface SideNavbarProps {}
 
-const SideBar :React.FC<SideNavbarProps> = ({
-  
-}) => {
-  const [sidebarOpen, setSidebarOpen] = useState(false)
+const SideBar: React.FC<SideNavbarProps> = ({}) => {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
     <>
-      {/*
-        This example requires updating your template:
-
-        ```
-        <html class="h-full bg-white">
-        <body class="h-full">
-        ```
-      */}
       <div>
         <Transition.Root show={sidebarOpen} as={Fragment}>
-          <Dialog as="div" className="relative z-50 lg:hidden" onClose={setSidebarOpen}>
+          <Dialog
+            as="div"
+            className="relative z-50 lg:hidden"
+            onClose={setSidebarOpen}
+          >
             <Transition.Child
               as={Fragment}
               enter="transition-opacity ease-linear duration-300"
@@ -80,9 +67,16 @@ const SideBar :React.FC<SideNavbarProps> = ({
                     leaveTo="opacity-0"
                   >
                     <div className="absolute left-full top-0 flex w-16 justify-center pt-5">
-                      <button type="button" className="-m-2.5 p-2.5" onClick={() => setSidebarOpen(false)}>
+                      <button
+                        type="button"
+                        className="-m-2.5 p-2.5"
+                        onClick={() => setSidebarOpen(false)}
+                      >
                         <span className="sr-only">Close sidebar</span>
-                        <XMarkIcon className="h-6 w-6 text-white" aria-hidden="true" />
+                        <XMarkIcon
+                          className="h-6 w-6 text-white"
+                          aria-hidden="true"
+                        />
                       </button>
                     </div>
                   </Transition.Child>
@@ -105,15 +99,17 @@ const SideBar :React.FC<SideNavbarProps> = ({
                                   href={item.href}
                                   className={classNames(
                                     item.current
-                                      ? 'bg-pink-700 text-white'
-                                      : 'text-pink-200 hover:text-white hover:bg-pink-700',
-                                    'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold'
+                                      ? "bg-pink-700 text-white"
+                                      : "text-pink-200 hover:text-white hover:bg-pink-700",
+                                    "group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
                                   )}
                                 >
                                   <item.icon
                                     className={classNames(
-                                      item.current ? 'text-white' : 'text-pink-200 group-hover:text-white',
-                                      'h-6 w-6 shrink-0'
+                                      item.current
+                                        ? "text-white"
+                                        : "text-pink-200 group-hover:text-white",
+                                      "h-6 w-6 shrink-0"
                                     )}
                                     aria-hidden="true"
                                   />
@@ -123,9 +119,7 @@ const SideBar :React.FC<SideNavbarProps> = ({
                             ))}
                           </ul>
                         </li>
-                        <li>
-                        
-                        </li>
+                        <li></li>
                       </ul>
                     </nav>
                   </div>
@@ -156,15 +150,17 @@ const SideBar :React.FC<SideNavbarProps> = ({
                           href={item.href}
                           className={classNames(
                             item.current
-                              ? 'bg-pink-700 text-white'
-                              : 'text-pink-200 hover:text-white hover:bg-pink-700',
-                            'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold'
+                              ? "bg-pink-700 text-white"
+                              : "text-pink-200 hover:text-white hover:bg-pink-700",
+                            "group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
                           )}
                         >
                           <item.icon
                             className={classNames(
-                              item.current ? 'text-white' : 'text-pink-200 group-hover:text-white',
-                              'h-6 w-6 shrink-0'
+                              item.current
+                                ? "text-white"
+                                : "text-pink-200 group-hover:text-white",
+                              "h-6 w-6 shrink-0"
                             )}
                             aria-hidden="true"
                           />
@@ -174,25 +170,27 @@ const SideBar :React.FC<SideNavbarProps> = ({
                     ))}
                   </ul>
                 </li>
-             
               </ul>
             </nav>
           </div>
         </div>
 
         <div className="sticky top-0 z-40 flex items-center gap-x-6 bg-pink-600 px-4 py-4 shadow-sm sm:px-6 lg:hidden">
-          <button type="button" className="-m-2.5 p-2.5 text-pink-200 lg:hidden" onClick={() => setSidebarOpen(true)}>
+          <button
+            type="button"
+            className="-m-2.5 p-2.5 text-pink-200 lg:hidden"
+            onClick={() => setSidebarOpen(true)}
+          >
             <span className="sr-only">Open sidebar</span>
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
           </button>
-          <div className="flex-1 text-sm font-semibold leading-6 text-white">Client</div>
-
+          <div className="flex-1 text-sm font-semibold leading-6 text-white">
+            Client
+          </div>
         </div>
-
-     
       </div>
     </>
-  )
-}
+  );
+};
 
-export default SideBar
+export default SideBar;

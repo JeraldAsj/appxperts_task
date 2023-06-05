@@ -67,6 +67,7 @@ const Clients = (props: Props) => {
         })
         .then((response: any) => {
           getAllClientDatas();
+          getAllSocialDatas();
           setOpen(false);
         })
         .catch((err: any) => {

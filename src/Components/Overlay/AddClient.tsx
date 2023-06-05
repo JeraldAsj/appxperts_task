@@ -114,7 +114,7 @@ const AddClient: React.FC<AddClientProps> = ({
                               <input
                                 id="ClientName"
                                 name="ClientName"
-                                type="ClientName"
+                                type="text"
                                 autoComplete="ClientName"
                                 onChange={handleChange("ClientName")}
                                 onBlur={handleBlur("ClientName")}
@@ -137,7 +137,7 @@ const AddClient: React.FC<AddClientProps> = ({
                               <input
                                 id="MobileNo"
                                 name="MobileNo"
-                                type="MobileNo"
+                                type="number"
                                 autoComplete="MobileNo"
                                 onChange={handleChange("MobileNo")}
                                 onBlur={handleBlur("MobileNo")}
@@ -160,7 +160,7 @@ const AddClient: React.FC<AddClientProps> = ({
                               <input
                                 id="EmailId"
                                 name="EmailId"
-                                type="EmailId"
+                                type="email"
                                 autoComplete="EmailId"
                                 onChange={handleChange("EmailId")}
                                 onBlur={handleBlur("EmailId")}
@@ -183,7 +183,7 @@ const AddClient: React.FC<AddClientProps> = ({
                               <input
                                 id="PostalCode"
                                 name="PostalCode"
-                                type="PostalCode"
+                                type="text"
                                 autoComplete="PostalCode"
                                 onChange={handleChange("PostalCode")}
                                 onBlur={handleBlur("PostalCode")}
@@ -206,7 +206,7 @@ const AddClient: React.FC<AddClientProps> = ({
                               <input
                                 id="ContactPerson"
                                 name="ContactPerson"
-                                type="ContactPerson"
+                                type="text"
                                 autoComplete="ContactPerson"
                                 onChange={handleChange("ContactPerson")}
                                 onBlur={handleBlur("ContactPerson")}
@@ -230,7 +230,7 @@ const AddClient: React.FC<AddClientProps> = ({
                               <input
                                 id="ContactNo"
                                 name="ContactNo"
-                                type="ContactNo"
+                                type="number"
                                 autoComplete="ContactNo"
                                 onChange={handleChange("ContactNo")}
                                 onBlur={handleBlur("ContactNo")}
@@ -253,7 +253,7 @@ const AddClient: React.FC<AddClientProps> = ({
                               <input
                                 id="Password"
                                 name="Password"
-                                type="Password"
+                                type="password"
                                 autoComplete="Password"
                                 onChange={handleChange("Password")}
                                 onBlur={handleBlur("Password")}
@@ -340,7 +340,7 @@ const AddClient: React.FC<AddClientProps> = ({
                                       </label>
                                       <input
                                         disabled={!item.checked}
-                                        type="text"
+                                        type="password"
                                         name="Password"
                                         id=""
                                         value={item.Password}
